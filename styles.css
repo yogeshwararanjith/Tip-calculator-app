@@ -1,0 +1,252 @@
+/* variables */
+
+:root{
+    --clr-Strong-cyan : hsl(172, 67%, 45%);
+    --clr-Very-dark-cyan : hsl(183, 100%, 15%);
+    --clr-Dark-grayish-cyan : hsl(186, 14%, 43%);
+    --clr-Grayish-cyan : hsl(184, 14%, 56%);
+    --clr-Light-grayish-cyan : hsl(185, 41%, 84%);
+    --clr-Very-light-grayish-cyan : hsl(189, 41%, 97%);
+    --clr-White : hsl(0, 0%, 100%);
+
+    --fw-rgl : 400;
+    --fw-bold : 700;
+    --ff : 'Space Mono';
+}
+
+/* resets or normalization */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+s img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+p,
+h1,
+h2 {
+  overflow-wrap: break-word;
+}
+
+body{
+    line-height: 1.5;
+}
+
+/* responsive layout */
+
+body{
+    background-color: var(--clr-Light-grayish-cyan);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    /* min-height: 100vh; */
+    font-family: 'Space Mono';
+}
+
+/* main{
+} */
+
+.svg-logo{
+    text-align: center;
+    margin: 3rem;
+}
+
+.calculator-card{
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    background-color: var(--clr-White);
+    /* max-width: 600px; */
+    padding: 2rem;  
+}
+
+.form-item{
+    display: flex;
+    flex-direction: column;
+}
+
+.form-item label{
+    font-weight: var(--fw-bold);
+    font-size: 15px;
+    color: var(--clr-Dark-grayish-cyan);
+    margin-bottom: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-item label .error{
+  color: var(--clr-Strong-cyan);
+  display: none;
+}
+
+.input-container {
+    position: relative;
+  }
+  
+  .input-container .icon {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 14px; /* Adjust as needed */
+    color: var(--clr-Dark-grayish-cyan);
+    pointer-events: none;
+  }
+  
+  .input-container input {
+    width: 100%; /* Ensure it takes the full container width */
+    padding: 1rem;
+    padding-left: 2rem; /* Add space for the dollar icon */
+    text-align: right; /* Align the text to the right */
+    border-radius: 5px;
+    border: 0px;
+    background-color: var(--clr-Very-light-grayish-cyan);
+    color: var(--clr-Very-dark-cyan);
+    font-size: 20px;
+    font-weight: var(--fw-bold);
+    font-family: var(--ff);
+  }
+
+  .tip{
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .tip p{
+    font-size: 15px;
+    font-weight: var(--fw-bold);
+    color: var(--clr-Dark-grayish-cyan);
+    margin-bottom: 1rem;
+  }
+
+  .tip-buttons{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .tip-button{
+    padding: 1rem;
+    border-radius: 5px;
+    background-color: var( --clr-Very-dark-cyan);
+    margin-bottom: 10px;
+    color: var(--clr-White);
+    font-size: 20px;
+    font-weight: var(--fw-bold);
+    width: 45%;
+    font-family: var(--ff);
+  }
+
+  .custom{
+    padding: 1rem;
+    font-size: 20px;
+    width: 45%;
+    font-weight: var(--fw-bold);
+    color: var(--clr-Dark-grayish-cyan);
+    border:0;
+    font-family: var(--ff);
+    background-color: var(--clr-White);
+    text-align: right;
+    margin-bottom: 10px;
+  }
+
+  .display-container{
+    margin-top: 2rem;
+    border-radius: 10px;
+    background-color: var(--clr-Very-dark-cyan);
+    padding: 2rem;
+  }
+  .totals{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .bill{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+  }
+
+  .person{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .person p{
+    font-size: 15px;
+    font-weight: var(--fw-bold);
+    color: var(--clr-White);
+  }
+
+  .person span{
+    color: var(--clr-Strong-cyan);
+  }
+
+  .amount{
+    font-size: 25px;
+    font-weight: var(--fw-bold);
+    color: var(--clr-Strong-cyan);
+  }
+
+  .reset{
+    padding: 1rem;
+    border-radius: 5px;
+    background-color: var(--clr-Strong-cyan);
+    color: var(--clr-Very-dark-cyan);
+    border: 0;
+    font-family: var(--ff);
+    font-size: 20px;
+    font-weight: var(--fw-bold);
+    margin-top: 1rem;
+    width: 100%;
+  }
+
+  @media only screen and (min-width:769px){
+        body{
+            margin: 0;
+            align-items: center;
+        }
+        .calculator-card{
+            display: flex;
+            flex-direction: row ;
+            /* justify-content: space-between; */
+            border-radius: 20px;
+        }
+        .tip-button{
+          width: 30%;
+        }
+        .custom{
+          width: 30%;
+        }
+        .display-container{
+          margin-left: 3rem;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+        }
+        .totals{
+            width: 300px;
+            justify-content: start;
+        }
+  }
+
+
+
+
